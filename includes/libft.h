@@ -6,7 +6,7 @@
 /*   By: migusant <migusant@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 13:07:43 by migusant          #+#    #+#             */
-/*   Updated: 2025/05/27 17:27:33 by migusant         ###   ########.fr       */
+/*   Updated: 2025/05/30 18:00:43 by migusant         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,6 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
-
-// STACK STRUCT ALIAS
-typedef struct s_stack
-{
-    void			*content;
-    struct s_stack	*next;
-    struct s_stack	*prev;
-}					t_stack;
 
 // FUNCTIONS FROM <string.h>
 char		*ft_strchr(const char *s, int c);
@@ -97,16 +89,5 @@ void		ft_lstdelone(t_list *lst, void (*del)(void*));
 void		ft_lstclear(t_list **lst, void (*del)(void*));
 void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-
-// STACK FUNCTIONS
-t_stack		*ft_stacknew(void *content);
-void		ft_stackadd_front(t_stack **stack, t_stack *new);
-int			ft_stacksize(t_stack *stack);
-t_stack		*ft_stacklast(t_stack *stack);
-void		ft_stackadd_back(t_stack **stack, t_stack *new);
-void		ft_stackdelone(t_stack *stack, void (*del)(void*));
-void		ft_stackclear(t_stack **stack, void (*del)(void*));
-void		ft_stackiter(t_stack *stack, void (*f)(void *));
-t_stack		*ft_stackmap(t_stack *stack, void *(*f)(void *), void (*del)(void *));
 
 #endif
