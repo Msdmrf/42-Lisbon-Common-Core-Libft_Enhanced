@@ -38,7 +38,6 @@ GETNEXTLINE_DIR = $(CFILES_DIR)getnextline/
 LISTS_DIR = $(CFILES_DIR)lists/
 MEMORY_DIR = $(CFILES_DIR)memory/
 PRINTF_DIR = $(CFILES_DIR)printf/
-STACKS_DIR = $(CFILES_DIR)stacks/
 STRINGS_DIR = $(CFILES_DIR)strings/
 
 # **************************************************************************** #
@@ -74,11 +73,6 @@ MEMORY = $(MEMORY_DIR)ft_bzero.c $(MEMORY_DIR)ft_calloc.c $(MEMORY_DIR)ft_memchr
          $(MEMORY_DIR)ft_memset.c
 
 PRINTF = $(PRINTF_DIR)ft_printf.c $(PRINTF_DIR)ft_printf_utils.c
-
-STACKS = $(STACKS_DIR)ft_stackadd_back.c $(STACKS_DIR)ft_stackadd_front.c \
-        $(STACKS_DIR)ft_stackclear.c $(STACKS_DIR)ft_stackdelone.c $(STACKS_DIR)ft_stackiter.c \
-        $(STACKS_DIR)ft_stacklast.c $(STACKS_DIR)ft_stackmap.c $(STACKS_DIR)ft_stacknew.c \
-        $(STACKS_DIR)ft_stacksize.c
 
 STRINGS = $(STRINGS_DIR)ft_putendl_fd.c $(STRINGS_DIR)ft_putnbr_fd.c \
           $(STRINGS_DIR)ft_putstr_fd.c $(STRINGS_DIR)ft_split.c \
